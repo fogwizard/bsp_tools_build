@@ -10,6 +10,10 @@ function croot(){
 	cd ${current_path}/../
 }
 
+function strip_tools(){
+       arm-linux-gnueabihf-strip ${current_path}/../stressapptest/src/stressapptest
+}
+
 function build_stressapptest(){
 	croot
 	cd stressapptest

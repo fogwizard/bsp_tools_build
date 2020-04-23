@@ -5,6 +5,7 @@ current_path=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
 echo buildscript_path=${current_path}
 echo cross_compile_compile=${cross_compile}
 export PATH=$PATH:${cross_compile}
+#SET(CMAKE_C_COMPILER $ENV{HOME}/bin/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc)
 
 function croot(){
 	cd ${current_path}/../

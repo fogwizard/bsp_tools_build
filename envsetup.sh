@@ -15,9 +15,22 @@ function strip_tools(){
        arm-linux-gnueabihf-strip ${current_path}/../stressapptest/src/stressapptest
 }
 
+function build_iozone(){
+	echo "please fix gcc in iozone makefile then run this function"
+	croot
+	cd iozone
+	CC=arm-linux-gnueabihf-gcc make linux-arm
+}
+
 function build_stressapptest(){
 	croot
 	cd stressapptest
 	./configure --host=arm-linux-gnueabihf  --with-static
 	make
+}
+
+function build_all(){
+	build_stressapptest
+	strip_tools
+	function build_iozone
 }

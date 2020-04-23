@@ -32,5 +32,5 @@ function build_stressapptest(){
 function build_all(){
 	build_stressapptest
 	strip_tools
-	function build_iozone
+	build_iozone
 }
